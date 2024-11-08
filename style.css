@@ -3,14 +3,27 @@ body {
     font-family: Arial, sans-serif;
 }
 
+#ofertas{ 
+    animation: initialcolor 10s infinite
+}
+
 h4 {
     padding: 0;
     margin: 0;
-    animation: initialColor 10s infinite;  
-    text-align: center;
+    position: relative; 
+    animation: moverfrase 10s linear infinite;
 }
 
-@keyframes initialColor { from { background-color: #ff7b00; } to { background-color: rgb(255, 198, 41); }}
+
+@keyframes initialcolor 
+{ 0% { background-color: rgb(255, 198, 41); } 50% { background-color: #ff7300; } 100% { background-color: rgb(255, 198, 41); } 
+}
+
+@keyframes moverfrase {
+    0% { transform: translate(-200px, 0);}
+    100% {transform: translate(1200px, 0);}
+}
+
 
 #navegacion {
     background-color: #000000;
@@ -27,8 +40,8 @@ nav ul {
 }
 
 nav li {
-    display: inline; /* Hace que los ítems del menú estén en una línea horizontal */
-    margin-right: 20px; /* Espacio entre los ítems del menú */
+    display: inline; 
+    margin-right: 20px;
 }
 
 nav a {
